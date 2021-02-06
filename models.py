@@ -1,21 +1,22 @@
-from flask import Flask
-from flask_migrate import Migrate
-from flask_moment import Moment
+import os
+from sqlalchemy import Column, String, Integer, create_engine
 from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
-from config import Config
+import json
 
+database_path = os.environ['DATABASE_URL']
 
-#----------------------------------------------------------------------------#
-# App Config.
-#----------------------------------------------------------------------------#
+db = SQLAlchemy()
 
-app = Flask(__name__)
-moment = Moment(app)
-app.config.from_object(Config)
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
-
+'''
+setup_db(app)
+    binds a flask application and a SQLAlchemy service
+'''
+def setup_db(app, database_path=database_path):
+    app.config["SQLALCHEMY_DATABASE_URI"] = database_path
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+    db.app = app
+    db.init_app(app)
+    db.create_all()
 
 #----------------------------------------------------------------------------#
 # Models.

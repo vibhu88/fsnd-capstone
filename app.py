@@ -18,7 +18,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flasgger import Swagger
 from flask_cors import CORS
 
-from .auth.auth import AuthError, requires_auth
 
 
 def create_app(test_config=None):
@@ -28,7 +27,7 @@ def create_app(test_config=None):
 
   return app
 
-APP = create_app()
+app = create_app()
 
 if __name__ == '__main__':
     APP.run(host='0.0.0.0', port=8080, debug=True)

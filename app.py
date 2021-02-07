@@ -8,6 +8,7 @@ request,
 Response, 
 flash, 
 redirect, 
+jsonify,
 url_for)
 import logging
 from logging import Formatter, FileHandler
@@ -17,7 +18,7 @@ from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
 from flasgger import Swagger
 from flask_cors import CORS
-from models import setup_db, db
+from models import setup_db, db, Movie
 
 
 
@@ -27,7 +28,17 @@ def create_app(test_config=None):
   setup_db(app)
   CORS(app)
 
-  return app
+@app.route('/movie', methods=['GET'])
+def get_movies():
+    movies = Movie.query.order_by(Movie.id).all()
+    f_title = [movie.title for movie in movies]
+
+    return jsonify({
+        'success': True,
+        'title': f_title
+    }), 200
+
+return app
 
 app = create_app()
 

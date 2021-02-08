@@ -22,6 +22,27 @@ def create_app(test_config=None):
             "movies": formatted_movies
         })
 
+    @app.route('/movies', methods=["POST"])
+    def create_movie():
+        body = request.get_json()
+
+        new_title = body.get('title', None)
+        new_release_date = body.get('release_date', None)
+
+        try:
+            movie = Movie(title=new_title,
+                          release_date=new_release_date
+                          )
+            movie.insert()
+            movies = Movie.query.order_by(Movie.id).all()
+            formatted_movies = [movie.format() for movie in movies]
+            return jsonify({
+                "success": True,
+                "movies": formatted_movies
+            })
+        except Exception:
+            abort(422)
+
     @app.errorhandler(404)
     def not_found(error):
         return jsonify({

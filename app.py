@@ -1,7 +1,7 @@
 from flask import Flask, request, abort, jsonify
 from flask_cors import CORS
 
-from models import setup_db, Movie, Artist
+from models import setup_db, Movie, Actor
 
 
 

@@ -52,14 +52,14 @@ class Movie(db.Model):
         'release_date': self.release_date
         }
 
-class Artist(db.Model):
-    __tablename__ = 'Artist'
+class Actor(db.Model):
+    __tablename__ = 'Actor'
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
     age = db.Column(db.Integer)
     gender = db.Column(db.String(20))
-    theatres = db.relationship('Theatre', backref='artist', cascade="all, delete-orphan", lazy=True)
+    theatres = db.relationship('Theatre', backref='actor', cascade="all, delete-orphan", lazy=True)
 
     def __init__(self, name, age,gender):
         self.name = name
@@ -85,18 +85,19 @@ class Artist(db.Model):
         }
 
 class Theatre(db.Model):
-    __tablename__ = 'Chart'
+    __tablename__ = 'Theatre'
     
     id = db.Column(db.Integer, primary_key=True)
     movie_id = db.Column(db.Integer, db.ForeignKey('Movie.id'), nullable = False)
-    artist_id = db.Column(db.Integer, db.ForeignKey('Artist.id'), nullable = False)
+    actor_id = db.Column(db.Integer, db.ForeignKey('Actor.id'), nullable = False)
 
     def __init__(self, movie_id, artist_id, start_time):
         self.movie_id = movie_id
-        self.artist_id = artist_id
+        self.actor_id = actor_id
 
     def format(self):
         return {
         'movie_id': self.movie_id,
-        'artist_id': self.artist_id
+        'actor_id': self.actor_id
         }
+    

@@ -22,6 +22,17 @@ def create_app(test_config=None):
             "movies": formatted_movies
         })
 
+    @app.route('/actors')
+    def get_movies():
+        actors = Actor.query.order_by(Actor.id).all()
+        if actors == []:
+            abort(404)
+        formatted_actors = [actor.format() for actor in actors]
+        return jsonify({
+            "success": True,
+            "actors": formatted_actors
+        })
+
     @app.route('/movies', methods=["POST"])
     def create_movie():
         body = request.get_json()
@@ -42,6 +53,30 @@ def create_app(test_config=None):
             })
         except Exception:
             abort(422)
+
+    @app.route('/actors', methods=["POST"])
+        def create_actor():
+            body = request.get_json()
+
+            new_name = body.get('name', None)
+            new_age = body.get('age', 0)
+            new_gender = body.get('gender', None)
+
+            try:
+                actor = Actor(name=new_name,
+                            age=new_age,
+                            gender=new_gender
+                            )
+                actor.insert()
+                actors = Actor.query.order_by(Actor.id).all()
+                formatted_actors = actor.format() for actor in actors]
+                return jsonify({
+                    "success": True,
+                    "actors": formatted_actors
+                })
+            except Exception:
+                abort(422)
+
 
     @app.errorhandler(404)
     def not_found(error):

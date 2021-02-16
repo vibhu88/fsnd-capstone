@@ -23,7 +23,7 @@ def create_app(test_config=None):
         })
 
     @app.route('/actors')
-    def get_movies():
+    def get_actors():
         actors = Actor.query.order_by(Actor.id).all()
         if actors == []:
             abort(404)

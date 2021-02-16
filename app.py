@@ -69,7 +69,7 @@ def create_app(test_config=None):
                         )
             actor.insert()
             actors = Actor.query.order_by(Actor.id).all()
-            formatted_actors = actor.format() for actor in actors]
+            formatted_actors = [actor.format() for actor in actors]
             return jsonify({
                 "success": True,
                 "actors": formatted_actors

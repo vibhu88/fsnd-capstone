@@ -6,8 +6,8 @@ from jose import jwt
 from urllib.request import urlopen
 
 
-AUTH0_DOMAIN = os.getenv('AUTH0_DOMAIN', 'dev-vu.us.auth0.com')
-API_AUDIENCE = os.getenv('API_AUDIENCE', 'coffee-shop-backend')
+AUTH0_DOMAIN = os.getenv('AUTH0_DOMAIN', 'dev-capstone-vu.us.auth0.com')
+API_AUDIENCE = os.getenv('API_AUDIENCE', 'capstone')
 ALGORITHMS   = os.getenv('ALGORITHMS', ['RS256'])
 
 class AuthError(Exception):

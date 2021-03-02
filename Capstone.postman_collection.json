@@ -1,0 +1,457 @@
+{
+	"info": {
+		"_postman_id": "1a79aa51-0a81-4a87-bf8a-ac27ae171980",
+		"name": "Capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[Local] POST Movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFTOGcwTEl0Z2ZOUTdBdkg3RHdGUyJ9.eyJpc3MiOiJodHRwczovL2Rldi1jYXBzdG9uZS12dS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAzOGE3ZWQ5NTRmYmUwMDZmZTNlNGU1IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MTQ3MTMyNTgsImV4cCI6MTYxNDc5OTY1OCwiYXpwIjoiZ05uWEdkYXpUeFZpM3VIYUNmbExOSEhiY1F3VThlaHEiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.AsM93mgcymdkaboe1j55Xy3V9vq0abeatdH-BDTb5ROawaLLLepBGJDVm5UTdBANuBXbqrig1wFoWozA7DnkHIkwCvcxsiDIyFoKBCEQx-Ha59USnRpttlR9wTVynD-Zwgd4YrcksNERCPYwwh_O4sl1TtfJIXjautAPH5FPVtQfKTUEi7nyyTaMdfg1mQ5EMAXvHRWIgSVDEGzXBDGVX34OQSFpiA5Uw6AB7YJ3h60pc0L5ImgX5o3C7mxauzHBh4jYtf4WancrXviNZ75cbaxL-F--DwwoQcQ6JNCiVZ5LxR8xw2jeGNUyW-PdkNgF3JBP4LQeUD9NG22zcUsAwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Avengers\",\r\n    \"release_date\":\"2021-06-01 10:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Local] POST Actors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFTOGcwTEl0Z2ZOUTdBdkg3RHdGUyJ9.eyJpc3MiOiJodHRwczovL2Rldi1jYXBzdG9uZS12dS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAzOGE3ZWQ5NTRmYmUwMDZmZTNlNGU1IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MTQ3MTMyNTgsImV4cCI6MTYxNDc5OTY1OCwiYXpwIjoiZ05uWEdkYXpUeFZpM3VIYUNmbExOSEhiY1F3VThlaHEiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.AsM93mgcymdkaboe1j55Xy3V9vq0abeatdH-BDTb5ROawaLLLepBGJDVm5UTdBANuBXbqrig1wFoWozA7DnkHIkwCvcxsiDIyFoKBCEQx-Ha59USnRpttlR9wTVynD-Zwgd4YrcksNERCPYwwh_O4sl1TtfJIXjautAPH5FPVtQfKTUEi7nyyTaMdfg1mQ5EMAXvHRWIgSVDEGzXBDGVX34OQSFpiA5Uw6AB7YJ3h60pc0L5ImgX5o3C7mxauzHBh4jYtf4WancrXviNZ75cbaxL-F--DwwoQcQ6JNCiVZ5LxR8xw2jeGNUyW-PdkNgF3JBP4LQeUD9NG22zcUsAwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"N. Chinia\",\r\n    \"age\":21,\r\n    \"gender\": \"Male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/actors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Local] PATCH Actors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFTOGcwTEl0Z2ZOUTdBdkg3RHdGUyJ9.eyJpc3MiOiJodHRwczovL2Rldi1jYXBzdG9uZS12dS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAzOGE3ZWQ5NTRmYmUwMDZmZTNlNGU1IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MTQ3MTMyNTgsImV4cCI6MTYxNDc5OTY1OCwiYXpwIjoiZ05uWEdkYXpUeFZpM3VIYUNmbExOSEhiY1F3VThlaHEiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.AsM93mgcymdkaboe1j55Xy3V9vq0abeatdH-BDTb5ROawaLLLepBGJDVm5UTdBANuBXbqrig1wFoWozA7DnkHIkwCvcxsiDIyFoKBCEQx-Ha59USnRpttlR9wTVynD-Zwgd4YrcksNERCPYwwh_O4sl1TtfJIXjautAPH5FPVtQfKTUEi7nyyTaMdfg1mQ5EMAXvHRWIgSVDEGzXBDGVX34OQSFpiA5Uw6AB7YJ3h60pc0L5ImgX5o3C7mxauzHBh4jYtf4WancrXviNZ75cbaxL-F--DwwoQcQ6JNCiVZ5LxR8xw2jeGNUyW-PdkNgF3JBP4LQeUD9NG22zcUsAwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Andrew\",\r\n    \"age\":21,\r\n    \"gender\": \"Male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/actors/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"actors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Local] PATCH Movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFTOGcwTEl0Z2ZOUTdBdkg3RHdGUyJ9.eyJpc3MiOiJodHRwczovL2Rldi1jYXBzdG9uZS12dS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAzOGE3ZWQ5NTRmYmUwMDZmZTNlNGU1IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MTQ3MTMyNTgsImV4cCI6MTYxNDc5OTY1OCwiYXpwIjoiZ05uWEdkYXpUeFZpM3VIYUNmbExOSEhiY1F3VThlaHEiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.AsM93mgcymdkaboe1j55Xy3V9vq0abeatdH-BDTb5ROawaLLLepBGJDVm5UTdBANuBXbqrig1wFoWozA7DnkHIkwCvcxsiDIyFoKBCEQx-Ha59USnRpttlR9wTVynD-Zwgd4YrcksNERCPYwwh_O4sl1TtfJIXjautAPH5FPVtQfKTUEi7nyyTaMdfg1mQ5EMAXvHRWIgSVDEGzXBDGVX34OQSFpiA5Uw6AB7YJ3h60pc0L5ImgX5o3C7mxauzHBh4jYtf4WancrXviNZ75cbaxL-F--DwwoQcQ6JNCiVZ5LxR8xw2jeGNUyW-PdkNgF3JBP4LQeUD9NG22zcUsAwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Avenger: Endgame\",\r\n    \"release_date\":\"2021-06-02 10:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/movies/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Local] DELETE Actors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFTOGcwTEl0Z2ZOUTdBdkg3RHdGUyJ9.eyJpc3MiOiJodHRwczovL2Rldi1jYXBzdG9uZS12dS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAzOGE3ZWQ5NTRmYmUwMDZmZTNlNGU1IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MTQ3MTMyNTgsImV4cCI6MTYxNDc5OTY1OCwiYXpwIjoiZ05uWEdkYXpUeFZpM3VIYUNmbExOSEhiY1F3VThlaHEiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.AsM93mgcymdkaboe1j55Xy3V9vq0abeatdH-BDTb5ROawaLLLepBGJDVm5UTdBANuBXbqrig1wFoWozA7DnkHIkwCvcxsiDIyFoKBCEQx-Ha59USnRpttlR9wTVynD-Zwgd4YrcksNERCPYwwh_O4sl1TtfJIXjautAPH5FPVtQfKTUEi7nyyTaMdfg1mQ5EMAXvHRWIgSVDEGzXBDGVX34OQSFpiA5Uw6AB7YJ3h60pc0L5ImgX5o3C7mxauzHBh4jYtf4WancrXviNZ75cbaxL-F--DwwoQcQ6JNCiVZ5LxR8xw2jeGNUyW-PdkNgF3JBP4LQeUD9NG22zcUsAwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/actors/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"actors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Local] DELETE Movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFTOGcwTEl0Z2ZOUTdBdkg3RHdGUyJ9.eyJpc3MiOiJodHRwczovL2Rldi1jYXBzdG9uZS12dS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDI4MjM0NzMzNjIxOTAzMzQ2NDgiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTYxNDMyODA4NCwiZXhwIjoxNjE0MzM1Mjg0LCJhenAiOiJnTm5YR2RhelR4VmkzdUhhQ2ZsTE5ISGJjUXdVOGVocSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.AN4Gvz7eFSfz3HQMKapbvvqTeK4UREOflocTGu2GBnfG1UqAvRDHLNY8VgF0chfC1Q3El84vO2iuB_UeyzRmQYLCHfjTIiCllfjgCT-CJg18iw2YecsmlTHrj0eOewhXcVx1Pit4pd89ntORjNtz7ecy2cPPqf7wHwlYM__ixPrtBbZxFczzCU6p3mk2o1XG10RhKkFH2F9hvhxUdFbnnyB7Vu0GLPD5boyTVALw2kRK9CgcgBgK36gddfRUIHBcaiPVHf4jy8jSu4IOiJrVu8WXOcZHfgVwIw8eRB39J1MwaMeJ1RnlgqJ2ebvzEJgjIti1FargDWHIym9ch5i83Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/movies/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Local] GET Movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFTOGcwTEl0Z2ZOUTdBdkg3RHdGUyJ9.eyJpc3MiOiJodHRwczovL2Rldi1jYXBzdG9uZS12dS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAzOGE3ZWQ5NTRmYmUwMDZmZTNlNGU1IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MTQ3MTMyNTgsImV4cCI6MTYxNDc5OTY1OCwiYXpwIjoiZ05uWEdkYXpUeFZpM3VIYUNmbExOSEhiY1F3VThlaHEiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.AsM93mgcymdkaboe1j55Xy3V9vq0abeatdH-BDTb5ROawaLLLepBGJDVm5UTdBANuBXbqrig1wFoWozA7DnkHIkwCvcxsiDIyFoKBCEQx-Ha59USnRpttlR9wTVynD-Zwgd4YrcksNERCPYwwh_O4sl1TtfJIXjautAPH5FPVtQfKTUEi7nyyTaMdfg1mQ5EMAXvHRWIgSVDEGzXBDGVX34OQSFpiA5Uw6AB7YJ3h60pc0L5ImgX5o3C7mxauzHBh4jYtf4WancrXviNZ75cbaxL-F--DwwoQcQ6JNCiVZ5LxR8xw2jeGNUyW-PdkNgF3JBP4LQeUD9NG22zcUsAwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Local] GET Actors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFTOGcwTEl0Z2ZOUTdBdkg3RHdGUyJ9.eyJpc3MiOiJodHRwczovL2Rldi1jYXBzdG9uZS12dS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAzOGE3ZWQ5NTRmYmUwMDZmZTNlNGU1IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MTQ3MTMyNTgsImV4cCI6MTYxNDc5OTY1OCwiYXpwIjoiZ05uWEdkYXpUeFZpM3VIYUNmbExOSEhiY1F3VThlaHEiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.AsM93mgcymdkaboe1j55Xy3V9vq0abeatdH-BDTb5ROawaLLLepBGJDVm5UTdBANuBXbqrig1wFoWozA7DnkHIkwCvcxsiDIyFoKBCEQx-Ha59USnRpttlR9wTVynD-Zwgd4YrcksNERCPYwwh_O4sl1TtfJIXjautAPH5FPVtQfKTUEi7nyyTaMdfg1mQ5EMAXvHRWIgSVDEGzXBDGVX34OQSFpiA5Uw6AB7YJ3h60pc0L5ImgX5o3C7mxauzHBh4jYtf4WancrXviNZ75cbaxL-F--DwwoQcQ6JNCiVZ5LxR8xw2jeGNUyW-PdkNgF3JBP4LQeUD9NG22zcUsAwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/actors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Actors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFTOGcwTEl0Z2ZOUTdBdkg3RHdGUyJ9.eyJpc3MiOiJodHRwczovL2Rldi1jYXBzdG9uZS12dS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAzOGE3ZWQ5NTRmYmUwMDZmZTNlNGU1IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MTQ3MTMyNTgsImV4cCI6MTYxNDc5OTY1OCwiYXpwIjoiZ05uWEdkYXpUeFZpM3VIYUNmbExOSEhiY1F3VThlaHEiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.AsM93mgcymdkaboe1j55Xy3V9vq0abeatdH-BDTb5ROawaLLLepBGJDVm5UTdBANuBXbqrig1wFoWozA7DnkHIkwCvcxsiDIyFoKBCEQx-Ha59USnRpttlR9wTVynD-Zwgd4YrcksNERCPYwwh_O4sl1TtfJIXjautAPH5FPVtQfKTUEi7nyyTaMdfg1mQ5EMAXvHRWIgSVDEGzXBDGVX34OQSFpiA5Uw6AB7YJ3h60pc0L5ImgX5o3C7mxauzHBh4jYtf4WancrXviNZ75cbaxL-F--DwwoQcQ6JNCiVZ5LxR8xw2jeGNUyW-PdkNgF3JBP4LQeUD9NG22zcUsAwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tom Cruise\",\r\n    \"age\":48,\r\n    \"gender\": \"Male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fsnd-capstone-vu.herokuapp.com/actors",
+					"protocol": "https",
+					"host": [
+						"fsnd-capstone-vu",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFTOGcwTEl0Z2ZOUTdBdkg3RHdGUyJ9.eyJpc3MiOiJodHRwczovL2Rldi1jYXBzdG9uZS12dS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAzOGE3ZWQ5NTRmYmUwMDZmZTNlNGU1IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MTQ3MTMyNTgsImV4cCI6MTYxNDc5OTY1OCwiYXpwIjoiZ05uWEdkYXpUeFZpM3VIYUNmbExOSEhiY1F3VThlaHEiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.AsM93mgcymdkaboe1j55Xy3V9vq0abeatdH-BDTb5ROawaLLLepBGJDVm5UTdBANuBXbqrig1wFoWozA7DnkHIkwCvcxsiDIyFoKBCEQx-Ha59USnRpttlR9wTVynD-Zwgd4YrcksNERCPYwwh_O4sl1TtfJIXjautAPH5FPVtQfKTUEi7nyyTaMdfg1mQ5EMAXvHRWIgSVDEGzXBDGVX34OQSFpiA5Uw6AB7YJ3h60pc0L5ImgX5o3C7mxauzHBh4jYtf4WancrXviNZ75cbaxL-F--DwwoQcQ6JNCiVZ5LxR8xw2jeGNUyW-PdkNgF3JBP4LQeUD9NG22zcUsAwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Avengers-Endgame 2\",\r\n    \"release_date\":\"2021-06-11 10:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fsnd-capstone-vu.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"fsnd-capstone-vu",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFTOGcwTEl0Z2ZOUTdBdkg3RHdGUyJ9.eyJpc3MiOiJodHRwczovL2Rldi1jYXBzdG9uZS12dS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjAzOGE3ZWQ5NTRmYmUwMDZmZTNlNGU1IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MTQ3MTMyNTgsImV4cCI6MTYxNDc5OTY1OCwiYXpwIjoiZ05uWEdkYXpUeFZpM3VIYUNmbExOSEhiY1F3VThlaHEiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.AsM93mgcymdkaboe1j55Xy3V9vq0abeatdH-BDTb5ROawaLLLepBGJDVm5UTdBANuBXbqrig1wFoWozA7DnkHIkwCvcxsiDIyFoKBCEQx-Ha59USnRpttlR9wTVynD-Zwgd4YrcksNERCPYwwh_O4sl1TtfJIXjautAPH5FPVtQfKTUEi7nyyTaMdfg1mQ5EMAXvHRWIgSVDEGzXBDGVX34OQSFpiA5Uw6AB7YJ3h60pc0L5ImgX5o3C7mxauzHBh4jYtf4WancrXviNZ75cbaxL-F--DwwoQcQ6JNCiVZ5LxR8xw2jeGNUyW-PdkNgF3JBP4LQeUD9NG22zcUsAwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fsnd-capstone-vu.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"fsnd-capstone-vu",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Actors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fsnd-capstone-vu.herokuapp.com/actors",
+					"protocol": "https",
+					"host": [
+						"fsnd-capstone-vu",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFTOGcwTEl0Z2ZOUTdBdkg3RHdGUyJ9.eyJpc3MiOiJodHRwczovL2Rldi1jYXBzdG9uZS12dS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDI4MjM0NzMzNjIxOTAzMzQ2NDgiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTYxNDMzODM0NCwiZXhwIjoxNjE0MzQ1NTQ0LCJhenAiOiJnTm5YR2RhelR4VmkzdUhhQ2ZsTE5ISGJjUXdVOGVocSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.f5hcwtRxrJh231UqJrCLdavRVi3-1fChOE7cGwVJUaC1bO72ZNWa9bhr0FMPry9z1-8iEOARL9GONtc8UVw7hQXqd0M763eoqy29kuuE9xmJbvLIy_5D3CRkZJqDCbvPpe-ETel8d3m9oH8wy2U5e3G5xGPdroGTPuKTOif1yxQSutJruZCz8bOdGqGu7QKw8OFcB8PtAo-ixsQ_23QWecNhcsCcGxJRUAzp19-lVixyjYvG9K34tdmetMp4e_fdeOut5ddZc3PnbXO7ON5DSYAz3EV_ZUVEIjXh8LjHY1DtI28pLb9-U3TcehI9jDvEmiV7dzN9K3dBKPlX3ah3HA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

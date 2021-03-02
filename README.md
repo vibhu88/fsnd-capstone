@@ -229,7 +229,7 @@ PATCH '/movies/<int:movie-id>'
         }
 ```
 
-POST '/actors'
+PATCH '/actors'
 - Takes an existing actor, age and gender entered by User and update it in the Actor table.
 - Request Arguments: Fields should be passed in the request body in JSON format - Name, Age, Gender
 - Returns: Actor Id of the movie which was added with a success message.
